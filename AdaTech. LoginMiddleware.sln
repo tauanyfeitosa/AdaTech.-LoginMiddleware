@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdaTech. LoginMiddleware.WebAPI", "AdaTech. LoginMiddleware.WebAPI\AdaTech. LoginMiddleware.WebAPI.csproj", "{C5B181F9-2246-48A7-9015-82C93739368D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5B181F9-2246-48A7-9015-82C93739368D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5B181F9-2246-48A7-9015-82C93739368D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5B181F9-2246-48A7-9015-82C93739368D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5B181F9-2246-48A7-9015-82C93739368D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FE51C7C8-5D1A-49D8-9B05-7EBF718DEF2C}
+	EndGlobalSection
+EndGlobal

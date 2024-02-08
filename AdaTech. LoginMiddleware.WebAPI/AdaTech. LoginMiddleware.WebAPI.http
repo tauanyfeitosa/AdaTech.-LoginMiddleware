@@ -1,0 +1,6 @@
+@AdaTech._LoginMiddleware.WebAPI_HostAddress = http://localhost:5087
+
+GET {{AdaTech._LoginMiddleware.WebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
