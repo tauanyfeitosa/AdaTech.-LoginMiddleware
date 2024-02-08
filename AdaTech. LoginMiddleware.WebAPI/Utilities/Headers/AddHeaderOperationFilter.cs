@@ -3,7 +3,7 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace AdaTech._LoginMiddleware.WebAPI.Utilities.Headers
 {
-    public class AddHeaderParameterOperationFilter : IOperationFilter
+    public class AddHeaderOperationFilter : IOperationFilter
     {
         public void Apply(OpenApiOperation operation, OperationFilterContext context)
         {
@@ -16,7 +16,7 @@ namespace AdaTech._LoginMiddleware.WebAPI.Utilities.Headers
 
                 operation.Parameters.Add(new OpenApiParameter
                 {
-                    Name = "UsuarioLogado",
+                    Name = "UsuarioLogadoId",
                     In = ParameterLocation.Header,
                     Required = false,
                     Schema = new OpenApiSchema

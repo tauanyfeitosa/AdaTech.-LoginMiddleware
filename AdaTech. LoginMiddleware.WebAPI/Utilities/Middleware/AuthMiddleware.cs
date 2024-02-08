@@ -21,7 +21,7 @@ namespace AdaTech._LoginMiddleware.WebAPI.Utilities.Middleware
                 return;
             }
 
-            if (!int.TryParse(context.Request.Headers["UsuarioLogado"], out int id))
+            if (!int.TryParse(context.Request.Headers["UsuarioLogadoId"], out int id))
             {
                 context.Response.StatusCode = StatusCodes.Status400BadRequest;
                 context.Response.ContentType = "application/json";

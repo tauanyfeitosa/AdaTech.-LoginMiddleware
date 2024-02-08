@@ -15,8 +15,7 @@ namespace AdaTech._LoginMiddleware.WebAPI
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen(options =>
             {
-                options.SwaggerDoc("v1", new OpenApiInfo { Title = "LoginMiddleware", Version = "v1" });
-                options.OperationFilter<AddHeaderParameterOperationFilter>();
+                options.OperationFilter<AddHeaderOperationFilter>();
             });
 
             var app = builder.Build();
@@ -29,11 +28,9 @@ namespace AdaTech._LoginMiddleware.WebAPI
 
             app.UseHttpsRedirection();
 
-
+            app.UseMiddleware<AuthMiddleware>();
             app.UseMiddleware<QueryValidationMiddleware>();
             app.UseMiddleware<ErrorHandlerMiddleware>();
-            app.UseMiddleware<AuthMiddleware>();
-
 
             app.UseAuthorization();
 
