@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace AdaTech._LoginMiddleware.WebAPI.Models
+namespace AdaTech._LoginMiddleware.WebAPI.Models.ModelRequest
 {
     public class UserRequest
     {

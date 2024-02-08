@@ -2,15 +2,16 @@
 using AdaTech._LoginMiddleware.WebAPI.Utilities.Data;
 using AdaTech._LoginMiddleware.WebAPI.Service;
 using Microsoft.AspNetCore.Mvc;
+using AdaTech._LoginMiddleware.WebAPI.Models.ModelRequest;
 
 namespace AdaTech._LoginMiddleware.WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UsuarioController : ControllerBase
+    public class UserController : ControllerBase
     {
         [HttpGet]
-        public IEnumerable<Usuario> Get()
+        public IEnumerable<User> Get()
         {
             return DataEntity.Usuarios;
         }
@@ -27,13 +28,13 @@ namespace AdaTech._LoginMiddleware.WebAPI.Controllers
             return LoginService.VerificarLogin(login, senha);
         }
 
-        [HttpPost("registro")]
+        [HttpPost("register")]
         public IActionResult PostRegistro([FromBody] UserRequest user)
         {
             return RegisterService.RegistrarUsuario(user);
         }
 
-        [HttpPost("sair")]
+        [HttpPost("logout")]
         public IActionResult PostLogout([FromQuery]  int id)
         {
             return LoginService.VerificarLogout(id);

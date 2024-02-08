@@ -43,7 +43,7 @@ namespace AdaTech._LoginMiddleware.WebAPI.Utilities.Middleware
             }
 
             // Validação para a ação PostLogout, que espera um parâmetro de consulta 'id'
-            if (context.Request.Path.Value.EndsWith("/sair", StringComparison.OrdinalIgnoreCase) &&
+            if (context.Request.Path.Value.EndsWith("/logout", StringComparison.OrdinalIgnoreCase) &&
                 context.Request.Method.Equals("POST", StringComparison.OrdinalIgnoreCase))
             {
                 if (!query.ContainsKey("id") || !int.TryParse(query["id"], out int id))

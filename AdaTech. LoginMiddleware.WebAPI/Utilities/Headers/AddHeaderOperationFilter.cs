@@ -8,7 +8,7 @@ namespace AdaTech._LoginMiddleware.WebAPI.Utilities.Headers
         public void Apply(OpenApiOperation operation, OperationFilterContext context)
         {
             var verificar = context.ApiDescription.RelativePath.Equals("api/login", StringComparison.OrdinalIgnoreCase)
-                                    || context.ApiDescription.RelativePath.Equals("api/registro", StringComparison.OrdinalIgnoreCase);
+                                    || context.ApiDescription.RelativePath.Equals("api/register", StringComparison.OrdinalIgnoreCase);
 
             if (!verificar)
             {

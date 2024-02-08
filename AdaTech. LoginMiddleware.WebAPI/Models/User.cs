@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace AdaTech._LoginMiddleware.WebAPI.Models
 {
-    public class Usuario
+    public class User
     {
         [JsonIgnore]
         public int Id { get; set; }

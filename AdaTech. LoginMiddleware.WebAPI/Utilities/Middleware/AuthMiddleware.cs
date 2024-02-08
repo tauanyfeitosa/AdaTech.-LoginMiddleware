@@ -15,7 +15,7 @@ namespace AdaTech._LoginMiddleware.WebAPI.Utilities.Middleware
         public async Task InvokeAsync(HttpContext context)
         {
             if (context.Request.Path.StartsWithSegments("/api/Usuario/login") ||
-                context.Request.Path.StartsWithSegments("/api/Usuario/registro"))
+                context.Request.Path.StartsWithSegments("/api/Usuario/register"))
             {
                 await _next(context);
                 return;

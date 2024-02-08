@@ -4,9 +4,9 @@ namespace AdaTech._LoginMiddleware.WebAPI.Utilities.Data
 {
     public static class DataEntity
     {
-        public static List<Usuario> Usuarios = new List<Usuario>
+        public static List<User> Usuarios = new List<User>
         {
-            new Usuario
+            new User
             {
                 Id = 1,
                 Nome = "Admin",
