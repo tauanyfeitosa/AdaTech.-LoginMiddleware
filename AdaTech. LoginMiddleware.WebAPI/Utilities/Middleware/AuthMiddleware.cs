@@ -15,17 +15,17 @@ namespace AdaTech._LoginMiddleware.WebAPI.Utilities.Middleware
         public async Task InvokeAsync(HttpContext context)
         {
             if (context.Request.Path.StartsWithSegments("/api/Usuario/login") ||
-            context.Request.Path.StartsWithSegments("/api/Usuario/registro"))
+                context.Request.Path.StartsWithSegments("/api/Usuario/registro"))
             {
                 await _next(context);
                 return;
             }
 
-            if (!int.TryParse(context.Request.Query["id"], out int id))
+            if (!int.TryParse(context.Request.Headers["UsuarioLogado"], out int id))
             {
                 context.Response.StatusCode = StatusCodes.Status400BadRequest;
                 context.Response.ContentType = "application/json";
-                await context.Response.WriteAsync(JsonSerializer.Serialize(new { Message = "O parâmetro 'id' é obrigatório e deve ser um número inteiro." }));
+                await context.Response.WriteAsync(JsonSerializer.Serialize(new { Message = "O cabeçalho 'UsuarioLogado' é obrigatório e deve ser um número inteiro." }));
                 return;
             }
 

@@ -10,7 +10,7 @@ namespace AdaTech._LoginMiddleware.WebAPI.Controllers
     public class UsuarioController : ControllerBase
     {
         [HttpGet]
-        public IEnumerable<Usuario> Get([FromQuery]int id)
+        public IEnumerable<Usuario> Get()
         {
             return DataEntity.Usuarios;
         }
