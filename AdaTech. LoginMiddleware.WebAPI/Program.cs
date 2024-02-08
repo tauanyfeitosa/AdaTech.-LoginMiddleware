@@ -1,5 +1,4 @@
-
-using AdaTech._LoginMiddleware.WebAPI.Middleware;
+using AdaTech._LoginMiddleware.WebAPI.Utilities.Middleware;
 
 namespace AdaTech._LoginMiddleware.WebAPI
 {

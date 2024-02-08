@@ -1,7 +1,7 @@
-﻿using AdaTech._LoginMiddleware.WebAPI.Data;
+﻿using AdaTech._LoginMiddleware.WebAPI.Utilities.Data;
 using System.Text.Json;
 
-namespace AdaTech._LoginMiddleware.WebAPI.Middleware
+namespace AdaTech._LoginMiddleware.WebAPI.Utilities.Middleware
 {
     public class AuthMiddleware
     {

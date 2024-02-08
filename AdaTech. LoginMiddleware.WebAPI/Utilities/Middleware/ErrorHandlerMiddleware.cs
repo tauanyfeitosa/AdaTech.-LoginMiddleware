@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 
-namespace AdaTech._LoginMiddleware.WebAPI.Middleware
+namespace AdaTech._LoginMiddleware.WebAPI.Utilities.Middleware
 {
     public class ErrorHandlerMiddleware
     {

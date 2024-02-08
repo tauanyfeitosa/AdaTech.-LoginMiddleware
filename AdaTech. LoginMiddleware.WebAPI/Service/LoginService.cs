@@ -1,9 +1,9 @@
 ﻿using AdaTech._LoginMiddleware.WebAPI.Utilities.Data;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AdaTech._LoginMiddleware.WebAPI.Views
+namespace AdaTech._LoginMiddleware.WebAPI.Service
 {
-    public static class LoginViews
+    public static class LoginService
     {
         public static IActionResult VerificarUsuarioLogado (int id)
         {

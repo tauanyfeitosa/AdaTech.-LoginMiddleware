@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 
-namespace AdaTech._LoginMiddleware.WebAPI.Middleware
+namespace AdaTech._LoginMiddleware.WebAPI.Utilities.Middleware
 {
     public class QueryValidationMiddleware
     {
@@ -29,7 +29,7 @@ namespace AdaTech._LoginMiddleware.WebAPI.Middleware
             }
 
             // Validação para a ação PostLogin, que espera parâmetros de consulta 'login' e 'senha'
-            if (context.Request.Path.Value.EndsWith("/login", StringComparison.OrdinalIgnoreCase) && 
+            if (context.Request.Path.Value.EndsWith("/login", StringComparison.OrdinalIgnoreCase) &&
                 context.Request.Method.Equals("POST", StringComparison.OrdinalIgnoreCase))
             {
                 if (!query.ContainsKey("login") || string.IsNullOrWhiteSpace(query["login"]) ||
@@ -43,7 +43,7 @@ namespace AdaTech._LoginMiddleware.WebAPI.Middleware
             }
 
             // Validação para a ação PostLogout, que espera um parâmetro de consulta 'id'
-            if (context.Request.Path.Value.EndsWith("/sair", StringComparison.OrdinalIgnoreCase) && 
+            if (context.Request.Path.Value.EndsWith("/sair", StringComparison.OrdinalIgnoreCase) &&
                 context.Request.Method.Equals("POST", StringComparison.OrdinalIgnoreCase))
             {
                 if (!query.ContainsKey("id") || !int.TryParse(query["id"], out int id))
@@ -51,7 +51,7 @@ namespace AdaTech._LoginMiddleware.WebAPI.Middleware
                     context.Response.StatusCode = StatusCodes.Status400BadRequest;
                     context.Response.ContentType = "application/json";
                     await context.Response.WriteAsync(JsonSerializer.Serialize(new { Message = "O parâmetro 'id' é obrigatório e deve ser um número inteiro." }));
-                return;
+                    return;
                 }
             }
 
