@@ -1,4 +1,4 @@
-﻿using AdaTech._LoginMiddleware.WebAPI.Data;
+﻿using AdaTech._LoginMiddleware.WebAPI.Utilities.Data;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AdaTech._LoginMiddleware.WebAPI.Views

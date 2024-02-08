@@ -1,6 +1,6 @@
 ﻿using AdaTech._LoginMiddleware.WebAPI.Models;
 
-namespace AdaTech._LoginMiddleware.WebAPI.Data
+namespace AdaTech._LoginMiddleware.WebAPI.Utilities.Data
 {
     public static class DataEntity
     {

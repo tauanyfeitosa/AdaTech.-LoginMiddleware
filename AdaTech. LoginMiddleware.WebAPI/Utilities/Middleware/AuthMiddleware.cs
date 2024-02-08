@@ -29,7 +29,7 @@ namespace AdaTech._LoginMiddleware.WebAPI.Middleware
                 return;
             }
 
-            var usuario = DataEntity.Usuarios.FirstOrDefault(u => u.Id == id && u.Is_logado);
+            var usuario = DataEntity.Usuarios.FirstOrDefault(u => u.Id == id && u.Is_logado && u.Is_admin);
 
             if (usuario != null)
             {
